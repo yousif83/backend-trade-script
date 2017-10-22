@@ -4,15 +4,20 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var http = require('http');
 var cors = require('cors')
 var index = require('./routes/index');
 var users = require('./routes/users');
 var suggestions = require('./routes/suggestions');
 var connections = require('./routes/connections');
 var seed = require('./routes/seed');
-
+var seedChat = require('./routes/chatSeed');
+var chat = require('./routes/chat');
+var sockets = require('./sockets')
 var app = express();
-
+var server = http.createServer(app);
+var io = require('socket.io')(server);
+sockets(io);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -31,6 +36,8 @@ app.use('/users', users);
 app.use('/seed', seed);
 app.use('/suggestions', suggestions);
 app.use('/network', connections);
+app.use('/seedChat', seedChat);
+app.use('/chat', chat);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -50,4 +57,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+module.exports = {
+  app,
+  server
+};
