@@ -1,54 +1,183 @@
 var db = require('../mongodb/monk')
 const userCollection=db.get('user')
+const bcrypt = require('bcrypt')
+var saltRounds=8
+
+var elonPassword=bcrypt.hashSync("elon", saltRounds)
+var connorPassword=bcrypt.hashSync("connor", saltRounds)
+var BillPassword=bcrypt.hashSync("bill", saltRounds)
+var brianPassword=bcrypt.hashSync("brian", saltRounds)
+var sallyPassword=bcrypt.hashSync("sally", saltRounds)
+var jjPassword=bcrypt.hashSync("jj", saltRounds)
+var mariaPassword=bcrypt.hashSync("maria", saltRounds)
+var yousifPassword=bcrypt.hashSync("yousif", saltRounds)
+var trentonPassword=bcrypt.hashSync("trenton", saltRounds)
+var codyPassword=bcrypt.hashSync("cody", saltRounds)
+var loganPassword=bcrypt.hashSync("logan", saltRounds)
+var caseyPassword=bcrypt.hashSync("casey", saltRounds)
+var tylerPassword=bcrypt.hashSync("tyler", saltRounds)
+var tyPassword=bcrypt.hashSync("ty", saltRounds)
+
+
 module.exports = {
 	seedUsers: function() {
   return userCollection.remove().then(() =>{
     return userCollection.insert([
       {
-        name:'Kyle Seeding',
-        imageUrl:'https://ak.picdn.net/assets/cms/97e1dd3f8a3ecb81356fe754a1a113f31b6dbfd4-stock-photo-photo-of-a-common-kingfisher-alcedo-atthis-adult-male-perched-on-a-lichen-covered-branch-107647640.jpg',
-        connections: [],
-        pending: [],
-        received: [],
-        skillsToLearn: ['angular4','sockets.io'],
-        skillsToTeach: ['react','view']
-      } ,
-      {
         name:'Elon Musk',
-        imageUrl:'https://i.ytimg.com/vi/tnBQmEqBCY0/maxresdefault.jpg',
+				email:'elon@gmail.com',
+				password:elonPassword,
+        imageUrl:'https://s3-us-west-2.amazonaws.com/yaltimimie/elon-musk.jpg',
         connections:[],
         pending: [],
         received: [],
         skillsToLearn: ['react'],
-        skillsToTeach: ['angular4','ember']
+        skillsToTeach: ['angular','go']
       } ,
       {
-        name:'Steve Jobs',
-        imageUrl:'https://s3.amazonaws.com/user-media.venngage.com/653853-b002e1417ae7934816a34e51d1fc7518.jpg',
+        name:'Connor Alcock ',
+				email:'Conner@gmail.com',
+				password:connorPassword,
+        imageUrl:'https://s3-us-west-2.amazonaws.com/yaltimimie/connor-alcock.jpg',
         connections:[],
         pending: [],
         received: [],
-        skillsToLearn: [],
+        skillsToLearn: ['angular','go'],
         skillsToTeach: []
       } ,
       {
         name:'Bill Gates',
-        imageUrl:'https://pbs.twimg.com/profile_images/889736688624312321/xVAFH9ZH_400x400.jpg',
+				email:'bill@gmail.com',
+				password:BillPassword,
+        imageUrl:'https://s3-us-west-2.amazonaws.com/yaltimimie/bill-gates.jpg',
         connections:[],
         pending: [],
         received: [],
-        skillsToLearn: ['view'],
+        skillsToLearn: ['python'],
+        skillsToTeach: ['c#']
+      },
+      {
+        name:'Brian Mann',
+				email:'brian@gmail.com',
+				password:brianPassword,
+        imageUrl:'https://s3-us-west-2.amazonaws.com/yaltimimie/brian-mann.jpg',
+        connections:[],
+        pending: [],
+        received: [],
+        skillsToLearn: ['c#','react'],
+        skillsToTeach: ['angular']
+      },
+      {
+        name:'Sally Bouley',
+				email:'sally@gmail.com',
+				password:sallyPassword,
+        imageUrl:'https://s3-us-west-2.amazonaws.com/yaltimimie/sally-bouley.jpg',
+        connections:[],
+        pending: [],
+        received: [],
+        skillsToLearn: ['c#'],
+        skillsToTeach: ['angular4','react']
+      },
+      {
+        name:'Jose Julio',
+				email:'jj@gmail.com',
+				password:jjPassword,
+        imageUrl:'https://s3-us-west-2.amazonaws.com/yaltimimie/jose-julio.jpg',
+        connections:[],
+        pending: [],
+        received: [],
+        skillsToLearn: ['go','c#'],
         skillsToTeach: ['angular4']
       },
       {
-        name:'Jeff Bezos',
-        imageUrl:'https://www.thesun.co.uk/wp-content/uploads/2017/03/nintchdbpict0002890226551-e1490950325831.jpg?strip=all&w=960',
+        name:'Maria Jose',
+				email:'maria@gmail.com',
+				password:mariaPassword,
+        imageUrl:'https://s3-us-west-2.amazonaws.com/yaltimimie/maria-jose.jpg',
+        connections:[],
+        pending: [],
+        received: [],
+        skillsToLearn: ['angular'],
+        skillsToTeach: ['python','react']
+      },
+      {
+        name:'Yousif Altimimie',
+				email:'yousif@gmail.com',
+				password:yousifPassword,
+        imageUrl:'https://s3-us-west-2.amazonaws.com/yaltimimie/yousif-altimimie.png',
+        connections:[],
+        pending: [],
+        received: [],
+        skillsToLearn: ['react','go'],
+        skillsToTeach: ['angular','c#']
+      },
+      {
+        name:'Trenton Wuerker',
+				email:'trenton@gmail.com',
+				password:trentonPassword,
+        imageUrl:'https://s3-us-west-2.amazonaws.com/yaltimimie/trenton-wuerker.jpg',
+        connections:[],
+        pending: [],
+        received: [],
+        skillsToLearn: ['angular'],
+        skillsToTeach: ['react','go','python']
+      },
+      {
+        name:'Cody Duskin',
+				email:'cody@gmail.com',
+				password:codyPassword,
+        imageUrl:'https://s3-us-west-2.amazonaws.com/yaltimimie/cody-duskin.jpg',
+        connections:[],
+        pending: [],
+        received: [],
+        skillsToLearn: ['angular'],
+        skillsToTeach: ['react','go']
+      },
+      {
+        name:'Logan Crewss',
+				email:'logan@gmail.com',
+				password:loganPassword,
+        imageUrl:'https://s3-us-west-2.amazonaws.com/yaltimimie/logan-crewss.jpg',
         connections:[],
         pending: [],
         received: [],
         skillsToLearn: ['view'],
-        skillsToTeach: ['sockets.io']
+        skillsToTeach: ['c#']
+      },
+      {
+        name:'Casey Herold',
+				email:'casey@gmail.com',
+				password:caseyPassword,
+        imageUrl:'https://s3-us-west-2.amazonaws.com/yaltimimie/casey-herold.jpg',
+        connections:[],
+        pending: [],
+        received: [],
+        skillsToLearn: ['go'],
+        skillsToTeach: ['angular']
+      },
+      {
+        name:'Tyler keesling',
+				email:'tyler@gmail.com',
+				password:tylerPassword,
+        imageUrl:'https://s3-us-west-2.amazonaws.com/yaltimimie/tyler-keesling.jpg',
+        connections:[],
+        pending: [],
+        received: [],
+        skillsToLearn: ['angular','go'],
+        skillsToTeach: ['react','python']
+      },
+      {
+        name:'Ty Richard',
+				email:'ty@gmail.com',
+				password:tyPassword,
+        imageUrl:'https://s3-us-west-2.amazonaws.com/yaltimimie/ty-richard.jpg',
+        connections:[],
+        pending: [],
+        received: [],
+        skillsToLearn: ['angular'],
+        skillsToTeach: ['react','python']
       }
+
     ])
    })
 

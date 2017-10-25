@@ -127,7 +127,8 @@ module.exports = {
       {
         chatRoom: body.chatRoom,
         name:body.name,
-        chatMessage:body.chatMessage
+        chatMessage:body.chatMessage,
+        senderId:body.senderId
       }
 
     ])

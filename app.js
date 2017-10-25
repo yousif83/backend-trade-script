@@ -13,6 +13,7 @@ var connections = require('./routes/connections');
 var seed = require('./routes/seed');
 var seedChat = require('./routes/chatSeed');
 var chat = require('./routes/chat');
+var auth = require('./routes/auth');
 var sockets = require('./sockets')
 var app = express();
 var server = http.createServer(app);
@@ -38,7 +39,7 @@ app.use('/suggestions', suggestions);
 app.use('/network', connections);
 app.use('/seedChat', seedChat);
 app.use('/chat', chat);
-
+app.use('/auth', auth)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
