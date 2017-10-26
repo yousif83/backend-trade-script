@@ -8,7 +8,7 @@ require('dotenv').config()
 const userCollection = db.get('user')
 
 router.post('/signup', function(req, res){
-  
+
   if (req.body.email.trim() =='' || req.body.name.trim()== '' ){
     res.json({
       error: 'email or username cannot be blank'
@@ -58,6 +58,7 @@ router.post('/login', function(req, res, next) {
 				if (match) {
           console.log(user[0]._id)
 					let token = jwt.sign(user[0], process.env.TOKENSECRET)
+          console.log(token)
 					res.json({
 						data: token
 					})
