@@ -60,7 +60,7 @@ router.post('/login', function(req, res, next) {
 					let token = jwt.sign(user[0], process.env.TOKENSECRET)
           console.log(token)
 					res.json({
-						data: token
+						data: "token"
 					})
 				} else {
 
