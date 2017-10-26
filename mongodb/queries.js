@@ -1,6 +1,7 @@
 var db = require('../mongodb/monk')
 const userCollection = db.get('user')
 const chatCollection = db.get('chat')
+const lessonsCollection = db.get('lessons')
 module.exports = {
   getUsers: function() {
     return userCollection.find()
@@ -122,12 +123,30 @@ module.exports = {
     })
   },
   insertChats: function(body) {
-    console.log(body)
+
     return chatCollection.insert([
       {
         chatRoom: body.chatRoom,
         name:body.name,
         chatMessage:body.chatMessage,
+        senderId:body.senderId
+      }
+
+    ])
+  },
+
+  getLessonsByLessonRoom: function(roomId) {
+    console.log(roomId)
+    return lessonsCollection.find({
+      lessonRoom: roomId
+    })
+  },
+  insertLessons: function(body) {
+    return lessonsCollection.insert([
+      {
+        lessonRoom: body.lessonRoom,
+        name:body.name,
+        lessonMessage:body.lessonMessage,
         senderId:body.senderId
       }
 

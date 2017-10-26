@@ -100,17 +100,7 @@ module.exports = {
         skillsToLearn: ['angular'],
         skillsToTeach: ['python','react']
       },
-      {
-        name:'Yousif Altimimie',
-				email:'yousif@gmail.com',
-				password:yousifPassword,
-        imageUrl:'https://s3-us-west-2.amazonaws.com/yaltimimie/yousif-altimimie.png',
-        connections:[],
-        pending: [],
-        received: [],
-        skillsToLearn: ['react','go'],
-        skillsToTeach: ['angular','c#']
-      },
+      
       {
         name:'Trenton Wuerker',
 				email:'trenton@gmail.com',
