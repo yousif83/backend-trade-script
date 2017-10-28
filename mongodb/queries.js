@@ -149,7 +149,8 @@ module.exports = {
         name:body.name,
         lessonMessage:body.lessonMessage,
         senderId:body.senderId,
-        codeFlag:body.codeFlag
+        codeFlag:body.codeFlag,
+        lessonSkill:body.lessonSkill
       }
 
     ])
