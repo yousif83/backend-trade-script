@@ -9,6 +9,13 @@ router.get('/:lessonRoom', function(req, res, next) {
   })
 });
 
+router.get('/:userId/userlessons', function(req, res, next) {
+
+  queries.getLessonsByuserId(req.params.userId).then(lessons => {
+    res.json(lessons)
+  })
+});
+
 router.put('/', function(req, res, next) {
   queries.insertLessons(req.body).then(lessons => {
     res.json(lessons)

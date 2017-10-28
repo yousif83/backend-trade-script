@@ -141,10 +141,10 @@ module.exports = {
       lessonRoom: roomId
     })
   },
-  getLessonsByuserId: function(roomId) {
-    console.log(roomId)
+  getLessonsByuserId: function(userId) {
+    console.log(userId)
     return lessonsCollection.find({
-      lessonRoom: roomId
+      receiveUserId: userId
     })
   },
   insertLessons: function(body) {
