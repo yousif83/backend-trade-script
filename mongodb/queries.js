@@ -142,12 +142,14 @@ module.exports = {
     })
   },
   insertLessons: function(body) {
+    console.log(body);
     return lessonsCollection.insert([
       {
         lessonRoom: body.lessonRoom,
         name:body.name,
         lessonMessage:body.lessonMessage,
-        senderId:body.senderId
+        senderId:body.senderId,
+        codeFlag:body.codeFlag
       }
 
     ])
