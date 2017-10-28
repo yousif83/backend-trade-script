@@ -155,7 +155,7 @@ module.exports = {
         name:body.name,
         lessonMessage:body.lessonMessage,
         senderId:body.senderId,
-        receiveUserId:body.receiveUserId
+        receiveUserId:body.receiveUserId,
         codeFlag:body.codeFlag,
         lessonSkill:body.lessonSkill
       }
