@@ -141,6 +141,12 @@ module.exports = {
       lessonRoom: roomId
     })
   },
+  getLessonsByuserId: function(roomId) {
+    console.log(roomId)
+    return lessonsCollection.find({
+      lessonRoom: roomId
+    })
+  },
   insertLessons: function(body) {
     console.log(body);
     return lessonsCollection.insert([
@@ -149,6 +155,7 @@ module.exports = {
         name:body.name,
         lessonMessage:body.lessonMessage,
         senderId:body.senderId,
+        receiveUserId:body.receiveUserId
         codeFlag:body.codeFlag,
         lessonSkill:body.lessonSkill
       }
