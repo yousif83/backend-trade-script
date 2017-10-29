@@ -162,6 +162,15 @@ module.exports = {
       }
 
     ])
+  },
+  updateUserOnlineFlag:function(id, body) {
+    return userCollection.update({
+      '_id': id
+    }, {
+      $set: {
+        "onlineFlag": body.onlineFlag
+      }
+    })
   }
 
 }

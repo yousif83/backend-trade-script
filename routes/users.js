@@ -25,6 +25,11 @@ router.put('/:id', function(req, res, next) {
     res.json(users)
   })
 });
+router.put('/:id/:flag/userOnline', function(req, res, next) {
+  queries.updateUserOnlineFlag(req.params.id, req.body).then(users => {
+    res.json(users)
+  })
+});
 router.put('/connections/:id', function(req, res, next) {
   queries.updateConnections(req.body,req.params.id).then(users => {
     res.json(users)
