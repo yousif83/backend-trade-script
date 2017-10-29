@@ -32,7 +32,8 @@ module.exports = {
         pending: [],
         received: [],
         skillsToLearn: ['react'],
-        skillsToTeach: ['angular','go']
+        skillsToTeach: ['angular','go'],
+				onlineFlag:false
       } ,
       {
         name:'Connor Alcock ',
@@ -43,7 +44,8 @@ module.exports = {
         pending: [],
         received: [],
         skillsToLearn: ['angular','go'],
-        skillsToTeach: []
+        skillsToTeach: [],
+				onlineFlag:false
       } ,
       {
         name:'Bill Gates',
@@ -54,7 +56,8 @@ module.exports = {
         pending: [],
         received: [],
         skillsToLearn: ['python'],
-        skillsToTeach: ['c#']
+        skillsToTeach: ['c#'],
+				onlineFlag:false
       },
       {
         name:'Brian Mann',
@@ -65,7 +68,8 @@ module.exports = {
         pending: [],
         received: [],
         skillsToLearn: ['c#','react'],
-        skillsToTeach: ['angular']
+        skillsToTeach: ['angular'],
+				onlineFlag:false
       },
       {
         name:'Sally Bouley',
@@ -76,7 +80,8 @@ module.exports = {
         pending: [],
         received: [],
         skillsToLearn: ['c#'],
-        skillsToTeach: ['angular4','react']
+        skillsToTeach: ['angular4','react'],
+				onlineFlag:false
       },
       {
         name:'Jose Julio',
@@ -87,7 +92,8 @@ module.exports = {
         pending: [],
         received: [],
         skillsToLearn: ['go','c#'],
-        skillsToTeach: ['angular4']
+        skillsToTeach: ['angular4'],
+				onlineFlag:false
       },
       {
         name:'Maria Jose',
@@ -98,9 +104,10 @@ module.exports = {
         pending: [],
         received: [],
         skillsToLearn: ['angular'],
-        skillsToTeach: ['python','react']
+        skillsToTeach: ['python','react'],
+				onlineFlag:false
       },
-      
+
       {
         name:'Trenton Wuerker',
 				email:'trenton@gmail.com',
@@ -110,7 +117,8 @@ module.exports = {
         pending: [],
         received: [],
         skillsToLearn: ['angular'],
-        skillsToTeach: ['react','go','python']
+        skillsToTeach: ['react','go','python'],
+				onlineFlag:false
       },
       {
         name:'Cody Duskin',
@@ -121,7 +129,8 @@ module.exports = {
         pending: [],
         received: [],
         skillsToLearn: ['angular'],
-        skillsToTeach: ['react','go']
+        skillsToTeach: ['react','go'],
+				onlineFlag:false
       },
       {
         name:'Logan Crewss',
@@ -132,7 +141,8 @@ module.exports = {
         pending: [],
         received: [],
         skillsToLearn: ['view'],
-        skillsToTeach: ['c#']
+        skillsToTeach: ['c#'],
+				onlineFlag:false
       },
       {
         name:'Casey Herold',
@@ -143,7 +153,8 @@ module.exports = {
         pending: [],
         received: [],
         skillsToLearn: ['go'],
-        skillsToTeach: ['angular']
+        skillsToTeach: ['angular'],
+				onlineFlag:false
       },
       {
         name:'Tyler keesling',
@@ -154,7 +165,8 @@ module.exports = {
         pending: [],
         received: [],
         skillsToLearn: ['angular','go'],
-        skillsToTeach: ['react','python']
+        skillsToTeach: ['react','python'],
+				onlineFlag:false
       },
       {
         name:'Ty Richard',
@@ -165,7 +177,8 @@ module.exports = {
         pending: [],
         received: [],
         skillsToLearn: ['angular'],
-        skillsToTeach: ['react','python']
+        skillsToTeach: ['react','python'],
+				onlineFlag:false
       }
 
     ])
