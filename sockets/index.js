@@ -8,6 +8,9 @@ module.exports = function(io) {
     socket.on('lesson',function(data){
       io.sockets.emit('lesson',data)
     })
+    socket.on('userOnline',function(data){
+      io.sockets.emit('userOnline',data)
+    })
   })
 
 }
