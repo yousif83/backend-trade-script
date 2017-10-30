@@ -29,8 +29,6 @@ router.post('/signup', function(req, res){
 
         userCollection.insert(req.body)
             .then(user => {
-              console.log(user);
-
               let token = jwt.sign(user, process.env.TOKENSECRET)
               res.json({
               	data: token
@@ -54,11 +52,10 @@ router.post('/login', function(req, res, next) {
 
 				let match=bcrypt.compareSync(req.body.password, user[0].password)
 
-        console.log(req.body.password);
 				if (match) {
-          console.log(user[0]._id)
+
 					let token = jwt.sign(user[0], process.env.TOKENSECRET)
-          console.log(token)
+        
 					res.json({
 						data: token
 					})

@@ -136,20 +136,20 @@ module.exports = {
   },
 
   getLessonsByLessonRoom: function(roomId) {
-    console.log(roomId)
+
     return lessonsCollection.find({
       lessonRoom: roomId
     })
   },
   getLessonsByuserId: function(userId, skill) {
-    console.log(userId)
+
     return lessonsCollection.find({
       receiveUserId: userId, lessonSkill: skill
     }
     )
   },
   insertLessons: function(body) {
-    console.log(body);
+
     return lessonsCollection.insert([
       {
         lessonRoom: body.lessonRoom,
@@ -164,7 +164,7 @@ module.exports = {
     ])
   },
   updateUserOnlineFlag:function(id, body) {
-    console.log(body);
+  
     return userCollection.update({
       '_id': id
     }, {
