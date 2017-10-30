@@ -43,8 +43,8 @@ module.exports = {
         connections:[],
         pending: [],
         received: [],
-        skillsToLearn: ['angular','go'],
-        skillsToTeach: [],
+        skillsToLearn: ['angular','cSharp'],
+        skillsToTeach: ['go'],
 				onlineFlag:false
       } ,
       {
@@ -68,7 +68,7 @@ module.exports = {
         pending: [],
         received: [],
         skillsToLearn: ['cSharp','react'],
-        skillsToTeach: ['angular'],
+        skillsToTeach: ['go'],
 				onlineFlag:false
       },
       {
@@ -80,7 +80,7 @@ module.exports = {
         pending: [],
         received: [],
         skillsToLearn: ['cSharp'],
-        skillsToTeach: ['angular4','react'],
+        skillsToTeach: ['go','react'],
 				onlineFlag:false
       },
       {
@@ -103,8 +103,8 @@ module.exports = {
         connections:[],
         pending: [],
         received: [],
-        skillsToLearn: ['angular'],
-        skillsToTeach: ['python','react'],
+        skillsToLearn: ['cSharp'],
+        skillsToTeach: ['python','go'],
 				onlineFlag:false
       },
 
@@ -116,7 +116,7 @@ module.exports = {
         connections:[],
         pending: [],
         received: [],
-        skillsToLearn: ['angular'],
+        skillsToLearn: ['cSharp'],
         skillsToTeach: ['react','go','python'],
 				onlineFlag:false
       },
@@ -152,8 +152,8 @@ module.exports = {
         connections:[],
         pending: [],
         received: [],
-        skillsToLearn: ['go'],
-        skillsToTeach: ['angular'],
+        skillsToLearn: ['react'],
+        skillsToTeach: ['cSharp'],
 				onlineFlag:false
       },
       {
@@ -176,8 +176,8 @@ module.exports = {
         connections:[],
         pending: [],
         received: [],
-        skillsToLearn: ['angular'],
-        skillsToTeach: ['react','python'],
+        skillsToLearn: ['react'],
+        skillsToTeach: ['cSharp','python'],
 				onlineFlag:false
       }
 
