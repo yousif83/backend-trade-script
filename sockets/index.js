@@ -11,6 +11,9 @@ module.exports = function(io) {
     socket.on('userOnline',function(data){
       io.sockets.emit('userOnline',data)
     })
+    socket.on('notification',function(data){
+      io.sockets.emit('notification',data)
+    })
   })
 
 }

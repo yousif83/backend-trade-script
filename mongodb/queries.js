@@ -164,6 +164,7 @@ module.exports = {
     ])
   },
   updateUserOnlineFlag:function(id, body) {
+    console.log(body);
     return userCollection.update({
       '_id': id
     }, {
