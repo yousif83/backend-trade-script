@@ -140,7 +140,7 @@ module.exports = {
         connections:[],
         pending: [],
         received: [],
-        skillsToLearn: ['view'],
+        skillsToLearn: ['go'],
         skillsToTeach: ['cSharp'],
 				onlineFlag:false
       },
@@ -165,7 +165,7 @@ module.exports = {
         pending: [],
         received: [],
         skillsToLearn: ['angular','go'],
-        skillsToTeach: ['react','python'],
+        skillsToTeach: ['react','cSharp'],
 				onlineFlag:false
       },
       {
