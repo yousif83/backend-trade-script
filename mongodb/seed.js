@@ -17,6 +17,7 @@ var loganPassword=bcrypt.hashSync("logan", saltRounds)
 var caseyPassword=bcrypt.hashSync("casey", saltRounds)
 var tylerPassword=bcrypt.hashSync("tyler", saltRounds)
 var tyPassword=bcrypt.hashSync("ty", saltRounds)
+var roxPassword=bcrypt.hashSync("rox", saltRounds)
 
 
 module.exports = {
@@ -178,6 +179,18 @@ module.exports = {
         received: [],
         skillsToLearn: ['react'],
         skillsToTeach: ['cSharp','python'],
+				onlineFlag:false
+      },
+      {
+        name:'Roxanne Baldwin',
+				email:'Roxanne@gmail.com',
+				password:roxPassword,
+        imageUrl:'https://s3-us-west-2.amazonaws.com/yaltimimie/rox.jpg',
+        connections:[],
+        pending: [],
+        received: [],
+        skillsToLearn: ['cSharp'],
+        skillsToTeach: ['go','python'],
 				onlineFlag:false
       }
 
